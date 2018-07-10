@@ -1,0 +1,30 @@
+{
+    "name": "dhritimanrick/mailchimp-store",
+    "description": "Laravel Mailchimp Store",
+    "keywords": ["laravel","ecommerce","mailchimp","store","e-com","email","cart","product","customer","orders"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dhritiman Nath",
+            "email": "dhritiman.nath@conversionbug.com"
+        }
+    ],
+    "require": {
+        "drewm/mailchimp-api": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dhritiman\\MailchimpStore\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dhritiman\\MailchimpStore\\Providers\\MailchimpStoreServiceProvider"
+            ],
+            "aliases": {
+                "MailChimpStore": "Dhritiman\\MailchimpStore\\Facades\\MailChimpStore"
+            }
+        }
+    }
+}
