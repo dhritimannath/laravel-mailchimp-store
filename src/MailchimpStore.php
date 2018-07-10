@@ -36,7 +36,7 @@ class MailChimpStore
     public function batch_create($input,$class)
     {
         $entity = $this->factory->make($class);
-        return $entity->batch_create();
+        return $entity->batch_create($input);
     }
 
     /**

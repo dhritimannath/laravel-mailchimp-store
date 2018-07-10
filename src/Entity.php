@@ -95,13 +95,13 @@ class Entity
      * @param string $url
      * @return void
      */
-    protected function batchProcess($data,$url)
+    protected function batchProcess($url,$data)
     {   
         $batch = $this->mailchimp->new_batch();
 
         foreach ($data as $k => $v) {
             $batch->post('op'.$k, $url, $v);
-        }
+        } 
 
         $result  = $batch->execute();
         return $result;
